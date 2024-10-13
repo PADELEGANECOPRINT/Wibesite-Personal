@@ -22,8 +22,9 @@ document.querySelectorAll('.btnDetail').forEach(item => {
     document.querySelector('.modalHarga').innerHTML = harga;
 
     const nohp = '6283832882778'; 
-    let pesan = 'https://api.whatsapp.com/send?phone=$(nohp)&text=Hallo Kak, saya ingin pesan produk ini ${gambar}';
+    const pesan = 'Halo Kak, saya ingin pesan produk ini';
+    const linkWa = `https://api.whatsapp.com/send?phone=${nohp}&text=${encodeURIComponent(pesan)}`;
 
-    document.querySelector('.btnBeli').href = pesan;
+    document.querySelector('.btnBeli').href = linkWa;
     });
 });
